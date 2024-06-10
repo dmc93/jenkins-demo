@@ -6,16 +6,14 @@ pipeline {
         stage('Make folders and files') {
             steps{
                 bat '''
-                mkdir testingPipeline
-                echo "Some Things" > testingPipleine\file.txt
+                echo "Step 1"
                 '''
             }
         }
         stage('View') {
             steps {
                 bat '''
-                dir
-                type testingPipeline\text.txt
+                echo "Step 2"
                 '''
             }
         }
